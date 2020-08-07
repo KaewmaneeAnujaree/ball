@@ -1,25 +1,23 @@
 public class Ball{
   float position_x,  position_y;
-  int size,y;
+  int size;
   
-  Ball(int pos_x,float pos_y,int yy,int s){
+  Ball(int pos_x,float pos_y,int s){
     position_x = pos_x;
     position_y = pos_y;
     size = s;
-    y = yy;
+
   }
 
   void draw(){
-    ellipse(position_x,position_y,y,y);
-  
-    line(position_x,position_y+(y/2),position_x,position_y+(y/2)+size);
+    circle(position_x,position_y,size);
   }
   
 }
 
 void setup(){
   size(500,500);
-  Ball balloon = new Ball(100,100,100,100);  
+  Ball balloon = new Ball(100,100,100);  
   balloon.draw();
   
 }
